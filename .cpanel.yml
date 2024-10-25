@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/trimworldwide/rauf.trimworldwide.com/
+    - /bin/cp * $DEPLOYPATH
