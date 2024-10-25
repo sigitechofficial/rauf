@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Proxy all requests except for WebSocket connections
+RewriteCond %{REQUEST_URI} !^/socket.io/
+RewriteRule ^(.*)$ http://localhost:4000/$1 [P,L]
+
+# Proxy WebSocket connections
+#ProxyPass /socket.io/ http://localhost:3000/socket.io/
+#ProxyPassReverse /socket.io/ http://localhost:3000/socket.io/
+

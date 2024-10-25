@@ -1,10 +1,11 @@
 // index.js
+require('dotenv').config();// Load environment variables from .env file
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -83,6 +84,11 @@ app.post('/login', (req, res) => {
     res.status(401).json({ message: 'Invalid username or password.' });
   }
 });
+
+// Root Route
+app.get('/', (req, res) => {
+    res.send('Welcome to the Node.js API!');
+  });  
 
 // Start the server
 app.listen(PORT, () => {
