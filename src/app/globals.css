@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("/public/font/Switzer/switzer.css");
+
+
+/* .btn{
+    position: relative;
+    display: inline-flex;
+    padding: 10px 30px;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    transition: width 0.8s, height 0.8s;
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
+ */
