@@ -9,9 +9,7 @@ deploy:
     - echo "Deployment tasks completed successfully."
   environment:
     NODE_ENV: production
-    PORT: 3000
+    PORT: 3005
     # Add other environment variables as needed
   hooks:
     - echo "Deployment to rauf.trimworldwide.com is complete."
-    # Example: Restarting the application (requires pm2 or similar)
-    - pm2 restart nextjs_
