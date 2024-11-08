@@ -1,0 +1,11 @@
+version: 1
+deployment:
+  tasks:
+    - echo "Starting deployment process..."
+    - echo "Installing Node.js dependencies..."
+    - npm install
+    - echo "Building the Next.js application..."
+    - npm run build
+    - echo "Deployment tasks completed successfully."
+  environment:
+    NODE_ENV: production
